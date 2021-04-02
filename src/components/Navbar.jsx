@@ -26,7 +26,7 @@ const Navbar = ({ showButtons }) => {
             });
         } else {
             gsap.to(menuRef.current, {
-                x: -400,
+                x: -470,
                 duration: 0.5,
             });
         }

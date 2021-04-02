@@ -35,7 +35,7 @@
 }
 
 .menuRoot {
-    width: 390px;
+    width: 450px;
     overflow: hidden;
     background-color: var(--primary600);
     position: absolute;
@@ -43,7 +43,7 @@
     left: 0;
     z-index: 10;
     padding: 15px 30px 25px 70px;
-    transform: translateX(-400px);
+    transform: translateX(-470px);
 }
 
 .listGroup {

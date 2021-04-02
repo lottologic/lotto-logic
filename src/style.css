@@ -23,4 +23,12 @@
         font-size: 9px;
         padding: 0;
     }
+
+    .pp-cont {
+        padding: 80px 20px;
+    }
+
+    .pp-cont p {
+        text-align: center;
+    }
 }

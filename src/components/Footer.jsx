@@ -58,7 +58,7 @@ const Footer = ({ showRegisterInput }) => {
                             <a href="/privacy-policy">
                                 <button textsize="small" className={styles.footerLink}>Privacy Policy</button>
                             </a>
-                            <a href="/privacy-policy">
+                            <a href="/terms-of-use">
                                 <button textsize="small" className={styles.footerLink}>Terms Of service</button>
                             </a>
                         </div>
