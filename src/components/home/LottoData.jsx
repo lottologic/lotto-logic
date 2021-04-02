@@ -43,7 +43,7 @@ const LottoData = () => {
 
     useEffect(() => {
         const fetchData = async () => {
-            const response = await axios.get('https://lottouserapp-env.eba-ukcpvyt8.ap-southeast-2.elasticbeanstalk.com/user/fetch');
+            const response = await axios.get('https://api.lottouser.com/user/fetch');
             let dataTemp = response.data;
             console.log(dataTemp)
             let dataTempArray = Object.values(dataTemp);
@@ -60,7 +60,7 @@ const LottoData = () => {
     useEffect(() => {
 
         const fetchData = async () => {
-            const response = await axios.get(`https://lottouserapp-env.eba-ukcpvyt8.ap-southeast-2.elasticbeanstalk.com/user/customfetch?lottery=${selectedLottery}&expShares=${selectedShares}`);
+            const response = await axios.get(`https://api.lottouser.com/user/customfetch?lottery=${selectedLottery}&expShares=${selectedShares}`);
             const dataTemp = response.data;
             console.log(dataTemp)
 
