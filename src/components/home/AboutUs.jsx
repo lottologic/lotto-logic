@@ -55,7 +55,7 @@ const AboutUs = () => {
                         >
                             READ {expanded ? 'Less' : 'More'}
                         </button>
-                        <a href="https://improov.io/feedback?ID=HLTUOX2" target="_blank" rel="noreferrer">
+                        <a href="https://improov.io/feedback?ID=HLTUOX2" target="_blank" rel="noreferrer" className={styles.feedbackLink}>
                         <button className={styles.feedback}>pROVIDE fEEDBACK</button>
                         </a>
                     </div>

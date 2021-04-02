@@ -53,16 +53,26 @@
         margin-bottom: 0 !important;
     }
 
+    .introText {
+        text-align: center;
+    }
+
     .readMore {
         background-color: transparent;
         color: var(--primary600);
         margin:  10px auto;
+        width: 100%;
+    }
+
+    .feedbackLink {
+        width: 100%;;
     }
 
     .feedback {
         width: 100%;
         background-color: var(--primary600);
         color: var(--white);
+        width: 100%;
     }
     
 }

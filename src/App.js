@@ -1,5 +1,5 @@
 import './App.css';
-import AddToHomescreen from 'react-add-to-homescreen';
+//import AddToHomescreen from 'react-add-to-homescreen';
 import Home from './pages/Home';
 import {
   Switch,
@@ -16,16 +16,16 @@ gsap.registerPlugin(ScrollTrigger);
 
 function App() {
 
-  const handleAddToHomescreenClick = () => {
+  /* const handleAddToHomescreenClick = () => {
     alert(`
       1. Open Share menu
       2. Tap on "Add to Home Screen" button`
     );
-  };
+  }; */
 
   return (
     <div>
-      <AddToHomescreen onAddToHomescreenClick={handleAddToHomescreenClick} />
+      {/* <AddToHomescreen onAddToHomescreenClick={handleAddToHomescreenClick} /> */}
       <Switch>
           <Route path="/privacy-policy">
             <PrivacyPolicy />

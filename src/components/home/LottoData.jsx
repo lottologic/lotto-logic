@@ -55,6 +55,20 @@ const LottoData = () => {
             }
         }
         fetchData();
+
+        const fetchSelectedButton = async () => {
+            const response = await axios.get('https://api.lottologic.org/user/defaultVal');
+            let dataTemp = response.data;
+            //console.log(dataTemp.column_name);
+
+            if (dataTemp.column_name === 'jackpot_value_score') {
+                setSelectedButton('jackpot');
+            } else {
+                setSelectedButton('total');
+            }
+        }
+        
+        fetchSelectedButton();
     }, []);
 
     useEffect(() => {
