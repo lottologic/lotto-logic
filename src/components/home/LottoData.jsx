@@ -43,9 +43,9 @@ const LottoData = () => {
 
     useEffect(() => {
         const fetchData = async () => {
-            const response = await axios.get('https://api.lottouser.com/user/fetch');
+            const response = await axios.get('https://api.lottologic.org/user/fetch');
             let dataTemp = response.data;
-            console.log(dataTemp)
+            
             let dataTempArray = Object.values(dataTemp);
             if (dataTempArray && dataTempArray.length > 0) {
                 const ddValueData = dataTempArray.find(d => d.dropdown);
@@ -60,9 +60,8 @@ const LottoData = () => {
     useEffect(() => {
 
         const fetchData = async () => {
-            const response = await axios.get(`https://api.lottouser.com/user/customfetch?lottery=${selectedLottery}&expShares=${selectedShares}`);
+            const response = await axios.get(`https://api.lottologic.org/user/customfetch?lottery=${selectedLottery}&expShares=${selectedShares}`);
             const dataTemp = response.data;
-            console.log(dataTemp)
 
             const temp = [...data];
             for (var i = 0; i < temp.length; i++) {

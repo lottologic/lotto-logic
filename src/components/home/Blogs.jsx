@@ -90,7 +90,7 @@ const Blogs = () => {
         const fetchBlogs = async () => {
             //setBlogs(blogsData);
             //setSelectedBlog(blogsData[0])
-            const response = await axios.get('https://api.lottouser.com/user/viewblog');
+            const response = await axios.get('https://api.lottologic.org/user/viewblog');
             const blogsTemp = response.data;
             if (blogsTemp) {
                 setBlogs(blogsTemp);

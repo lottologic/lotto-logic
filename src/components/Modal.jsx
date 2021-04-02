@@ -6,7 +6,6 @@ const Modal = ({setActive, children}) => {
   const greyArea = useRef(null);
     
   useEffect(() => {
-      console.log(window.locoScroll.scroll.instance);
       // Acceses the locomotive instance to set the height of the success window
       // document.querySelector("#popupContainer").style.top = `${Math.round(window.locoScroll.scroll.instance.delta.y)}px`;
   },[]);
@@ -49,8 +48,6 @@ const LocomotiveModal = ({active, setActive, children}) => {
       isMounted = false;
     };
   },[]); */
-
-  console.log(active)
 
   return (
       <>
