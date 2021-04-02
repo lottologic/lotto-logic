@@ -90,7 +90,7 @@ const Blogs = () => {
         const fetchBlogs = async () => {
             //setBlogs(blogsData);
             //setSelectedBlog(blogsData[0])
-            const response = await axios.get('http://lottouserapp-env.eba-ukcpvyt8.ap-southeast-2.elasticbeanstalk.com/user/viewblog');
+            const response = await axios.get('https://lottouserapp-env.eba-ukcpvyt8.ap-southeast-2.elasticbeanstalk.com/user/viewblog');
             const blogsTemp = response.data;
             if (blogsTemp) {
                 setBlogs(blogsTemp);
