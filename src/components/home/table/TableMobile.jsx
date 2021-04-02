@@ -37,6 +37,12 @@ const TableMobile = ({ data }) => {
         return styles.evenRow;
     }
 
+    const getOddsValue = (value) => {
+        let valueTemp = value / 1000000;
+        valueTemp = valueTemp.toFixed(1);
+        return `1: $${valueTemp}m`;
+    }
+
     return (
         <div className={styles.root}>
             
@@ -135,7 +141,7 @@ const TableMobile = ({ data }) => {
                         {data.map((d, index) => (
                             <div className={`${styles.row} ${styles.lastSlideRow}`}>
                                 <div className={`${styles.cell} ${getClassNameForRow(index)}`}>
-                                    {d.oddsOfJackpotPerDollarSpent}
+                                    {getOddsValue(d.oddsOfJackpotPerDollarSpent)}
                                 </div>
                                 <div className={`${styles.cell} ${getClassNameForRow(index)}`}>
                                     <Popup
