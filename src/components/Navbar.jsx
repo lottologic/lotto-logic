@@ -76,12 +76,14 @@ const Navbar = ({ showButtons }) => {
                         <button
                             className={`mr-3 ${styles.toggleBtn} ${selectedButton === 'jackpot' ? styles.active : ''}`}
                             onClick={onJackpotButtonClick}
+                            id="navbarJackpot"
                         >
                             Jackpot Value
                         </button>
                         <button
                             className={`${styles.toggleBtn} ${selectedButton === 'total' ? styles.active : ''}`}
                             onClick={onTotalButtonClick}
+                            id="navbarTotal"
                         >
                             Total Value
                     </button>

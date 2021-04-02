@@ -5,6 +5,7 @@ import styles from './lottoData.module.css';
 import Table from './table/Table';
 import Dropdown from '../Dropdown';
 import RangeSelector from '../RangeSelector';
+import navbarStyles from '../navbar.module.css';
 
 const $ = window.$;
 
@@ -45,7 +46,7 @@ const LottoData = () => {
         const fetchData = async () => {
             const response = await axios.get('https://api.lottologic.org/user/fetch');
             let dataTemp = response.data;
-            
+
             let dataTempArray = Object.values(dataTemp);
             if (dataTempArray && dataTempArray.length > 0) {
                 const ddValueData = dataTempArray.find(d => d.dropdown);
@@ -63,11 +64,13 @@ const LottoData = () => {
 
             if (dataTemp.column_name === 'jackpot_value_score') {
                 setSelectedButton('jackpot');
+
             } else {
                 setSelectedButton('total');
+
             }
         }
-        
+
         fetchSelectedButton();
     }, []);
 
@@ -95,12 +98,32 @@ const LottoData = () => {
                 sortByTotalValue(temp);
             }
         }
-        
+
         if (selectedShares) {
             fetchData();
         }
 
     }, [selectedShares, selectedLottery]);
+
+    useEffect(() => {
+        if (selectedButton === 'jackpot') {
+            //remove active from navbar total
+            let classList = $('#navbarTotal').attr('class').split(/\s+/);
+            classList = classList.filter(c => c.indexOf('active') === -1);
+            $('#navbarTotal').attr('class', classList.join(' '));
+
+            //add class active to navbar jackpot
+            $('#navbarJackpot').addClass(navbarStyles.active);
+        } else {
+            //remove active from navbar jackpot
+            let classList = $('#navbarJackpot').attr('class').split(/\s+/);
+            classList = classList.filter(c => c.indexOf('active') === -1);
+            $('#navbarJackpot').attr('class', classList.join(' '));
+
+            //add class active to navbar total
+            $('#navbarTotal').addClass(navbarStyles.active);
+        }
+    }, [selectedButton]);
 
     return (
         <section className={styles.root}>
