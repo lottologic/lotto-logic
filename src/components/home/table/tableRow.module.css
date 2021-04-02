@@ -1,0 +1,108 @@
+.row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 0.6fr;
+    height: 48px;
+    position: relative;
+}
+
+.row:last-child {
+    border-radius: 0px 0px 4px 4px;
+}
+
+.header {
+    background-color: var(--primary600);
+    border-radius: 4px 4px 0 0;
+}
+
+.firstRow {
+    background-color: rgba(var(--goldRGB), 0.4);
+    border: 0.5px solid rgba(var(--rubyRGB), 0.4);
+}
+
+.secondRow {
+    background-color: rgba(var(--orangeRGB), 0.4);
+    border: 0.5px solid rgba(var(--rubyRGB), 0.4);
+    border-top: none;
+}
+
+.thirdRow {
+    background-color: rgba(var(--fluroPinkRGB), 0.4);
+    border: 0.5px solid rgba(var(--rubyRGB), 0.4);
+    border-top: none;
+}
+
+.positionLabel {
+    height: 48px;
+    width: 45px;
+    padding-left: 5px;
+    border-radius: 44px 0 0 44px;
+    border: 1px solid rgba(var(--rubyRGB), 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0px;
+    left: -45px;
+    box-shadow: var(--boxShadow);
+}
+
+.plRow1 {
+    background-color: rgba(var(--goldRGB), 0.4);
+    top: -1px;
+    border-bottom-width: 0.5px;
+}
+
+.plRow2 {
+    background-color: rgba(var(--orangeRGB), 0.4);
+    border-top-width: 0.5px;
+    border-bottom-width: 0.5px;
+}
+
+.plRow3 {
+    background-color: rgba(var(--fluroPinkRGB), 0.4);
+    border-top-width: 0.5px;
+}
+
+.oddRow {
+    background-color: var(--primary100);
+}
+
+.evenRow {
+    background-color: var(--white);
+}
+
+.cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cell button, .cell p {
+    text-align: center;
+}
+
+.infoBtn {
+    padding: 3px 8px;
+    border-radius: 50%;
+    background-color: var(--primary600);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.desc {
+    height: 0;
+    overflow: hidden;
+}
+
+.descContent {
+    width: 80%;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.lotteryImage {
+    height: 40px;
+    max-width: 115px;
+}

@@ -1,0 +1,36 @@
+.root {
+    background-color: var(--cream);
+    min-height: 580px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.line {
+    width: 80%;
+    margin: 2.5rem 0;
+    border-top: 2px solid var(--primary600);
+}
+
+.todaysPickHeading {
+    color: var(--ruby);
+}
+
+.todaysPickLogo {
+    height: 45px;
+}
+
+@media (max-width: 768px) {
+    .root {
+        padding-left: 55px 0;
+    }
+
+    .heroImage {
+        width: 256px;
+        margin-bottom: 40px;
+    }
+
+    .line {
+        width: 100%;
+    }
+}

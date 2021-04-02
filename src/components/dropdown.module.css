@@ -1,0 +1,80 @@
+.inverted {
+    margin-left: 10px;
+}
+
+.root, .invertedRoot {
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--cream);
+}
+
+.root {
+    min-width: 200px;
+    background-color: var(--cream);
+}
+
+.invertedRoot {
+    min-width: 60px;
+    margin-left: 10px;
+}
+
+.icon {
+    margin-right: 10px;
+    transition: all 0.2s ease;
+}
+
+.iconRotated {
+    transform: rotate(-180deg);
+}
+
+.optionsRoot {
+    min-width: 100%;
+    background-color: var(--grey9);
+    border-radius: 4px;
+    overflow: hidden;
+    height: 0;
+    position: absolute;
+    margin-top: 10px;
+    z-index: 5;
+}
+
+.option {
+    width: 100%;
+    margin-top: 10px;
+    color: var(--white);
+    padding: 0;
+}
+
+.option:last-child {
+    margin-bottom: 10px;
+}
+
+.selected {
+    color: var(--primary600);
+}
+
+.rangeInput, .rangeInput:focus {
+    background: none;
+    border: none;
+    outline: none;
+    font-family: "HelveticaNeue";
+    font-size: 14px;
+    line-height: 130%;
+    font-weight: normal;
+    width: 20px;
+    text-align: center;
+}
+
+/* Chrome, Safari, Edge, Opera */
+.rangeInput::-webkit-outer-spin-button,
+.rangeInput::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+.rangeInput {
+  -moz-appearance: textfield;
+}

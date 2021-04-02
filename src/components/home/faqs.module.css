@@ -1,0 +1,33 @@
+.root {
+    width: 100%;
+    height: 100%;
+}
+
+.faqRoot {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.expand {
+    overflow: hidden;
+    height: 0;
+}
+
+.answer {
+    color: var(--grey4);
+    padding-top: 15px;
+    white-space: pre-line;
+}
+
+.toggleBtn {
+    margin-top: 10px;
+    color: var(--primary600);
+}
+
+@media (max-width: 768px) {
+    .root {
+        padding-bottom: 50px;
+    }
+}

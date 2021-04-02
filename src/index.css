@@ -1,0 +1,317 @@
+@font-face {
+  font-family: "ArialRounded";
+  src: url(./assets/fonts/ArialRoundedBold.ttf) format("truetype");
+  font-style: normal;
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "HelveticaNeue";
+  src: url(./assets/fonts/HelveticaNeue\ Thin.ttf) format("truetype");
+  font-style: normal;
+  font-weight: 100;
+}
+
+/* @font-face {
+  font-family: "HelveticaNeue";
+  src: url(./assets/fonts/HelveticaNeueLt.ttf) format("truetype");
+  font-style: normal;
+  font-weight: 200;
+} */
+
+@font-face {
+  font-family: "HelveticaNeue";
+  src: url(./assets/fonts/HelveticaNeue.ttf) format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "HelveticaNeue";
+  src: url(./assets/fonts/HelveticaNeue\ Medium.ttf) format("truetype");
+  font-style: 600;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "HelveticaNeue";
+  src: url(./assets/fonts/HelveticaNeueBd.ttf) format("truetype");
+  font-style: normal;
+  font-weight: bold;
+}
+
+:root {
+  /* Dark */
+  --white: #FFFFFF;
+  --grey1: #E8E7EA;
+  --grey2: #D2D0D6;
+  --grey3: #BBB8C1;
+  --grey4: #8E8998;
+  --grey5: #777183;
+  --grey6: #61596E;
+  --grey7: #4A4159;
+  --grey8: #342A45;
+  --grey9: #1D1230;
+
+  /* Primary */
+  --primary100: #D8EFF2;
+  --primary200: #ABE5EB;
+  --primary300: #6BD2DC;
+  --primary400: #56CCD7;
+  --primary500: #41C5D2;
+  --primary600: #2CBFCD;
+  --primary700: #28ACB9;
+  --primary800: #2399A4;
+  --primary900: #1F8690;
+
+  /* Primary - Ruby */
+  --ruby: #A41E24;
+
+  /* Primary - Pink */
+  --pink: #F2A591;
+
+  /* Primary - Cream */
+  --cream: #F5E2CA;
+
+  /* Success */
+  --success100: #CFFCF2;
+  --success200: #9FFAE4;
+  --success300: #6EF7D7;
+  --success400: #3EF4CA;
+  --success500: #0EF1BC;
+  --success600: #0BC196;
+  --success700: #089171;
+  --success800: #089171;
+  --success900: #033026;
+
+  /* Error */
+  --error100: #F8D3D3;
+  --error200: #F1A7A7;
+  --error300: #EB7A7A;
+  --error400: #E44E4E;
+  --error500: #DF3030;
+  --error600: #B11B1B;
+  --error700: #851414;
+  --error800: #580E0E;
+  --error900: #2C0707;
+
+  /* Secondary */
+  --brightPink: #E4499A;
+  --fluroPink: #F49CC0;
+  --musk: #C9797E;
+  --orange: #F15A2E;
+  --gold: #D2AF6E;
+  --green: #008442;
+  --skyBlue: #0092CF;
+  --pastelBlue: #6D93C8;
+
+  --goldRGB: 210,175,110;
+  --orangeRGB: 241,90,46;
+  --fluroPinkRGB: 244,156,192;
+  --rubyRGB: 164,30,36;
+
+  /*Shadows*/
+  --boxShadow: 0px 2px 5px rgba(0, 0, 0, 0.07);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+  font-family: "HelveticaNeue";
+  color: var(--jet);
+  background-color: var(--jet);
+}
+
+h1 {
+  font-family: 'ArialRounded';
+  font-size: 36px;
+  line-height: 120%;
+  font-weight: bold;
+  margin: 0;
+}
+
+h2 {
+  font-family: 'ArialRounded';
+  font-size: 30px;
+  line-height: 120%;
+  font-weight: bold;
+  margin: 0;
+}
+
+h3 {
+  font-family: 'ArialRounded';
+  font-size: 26px;
+  line-height: 120%;
+  font-weight: bold;
+  margin: 0;
+}
+
+h4 {
+  font-family: 'ArialRounded';
+  font-size: 22px;
+  line-height: 120%;
+  font-weight: bold;
+  margin: 0;
+}
+
+h5 {
+  font-family: 'ArialRounded';
+  font-size: 18px;
+  line-height: 120%;
+  font-weight: bold;
+  margin: 0;
+}
+
+h6 {
+  font-family: 'ArialRounded';
+  font-size: 16px;
+  line-height: 120%;
+  font-weight: bold;
+  margin: 0;
+}
+
+p[textsize="large"] {
+  font-family: "HelveticaNeue";
+  font-size: 16px;
+  line-height: 140%;
+  font-weight: 400;
+  margin: 0;
+}
+
+p {
+  font-family: "HelveticaNeue";
+  font-size: 14px;
+  line-height: 140%;
+  font-weight: 400;
+  margin: 0;
+}
+
+p[textsize="small"] {
+  font-family: "HelveticaNeue";
+  font-size: 12px;
+  line-height: 130%;
+  font-weight: 400;
+  margin: 0;
+}
+
+p[textsize="extraSmall"] {
+  font-family: "HelveticaNeue";
+  font-size: 10px;
+  line-height: 120%;
+  font-weight: 400;
+  margin: 0;
+}
+
+button {
+  font-family: "HelveticaNeue";
+  font-size: 14px;
+  line-height: 130%;
+  font-weight: normal;
+  text-transform: uppercase;
+  cursor: pointer;
+  border:none;
+  border-radius: 4px;
+  padding: 0;
+  background-color: inherit;
+  -webkit-appearance: none;
+  padding: 14px 21px;
+}
+
+button[textsize="small"] {
+  font-family: "HelveticaNeue";
+  font-size: 12px;
+  line-height: 130%;
+  font-weight: normal;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  padding: 0;
+  background-color: inherit;
+  -webkit-appearance: none;
+}
+
+button:focus {
+  outline: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:link, a:visited, a:hover, a:active {
+  text-decoration: none;
+}
+
+/* a {
+  font-family: "HelveticaNeue";
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: normal;
+  letter-spacing: 0.314rem;
+  color: var(--jet);
+  text-transform: uppercase;
+  text-decoration: none;
+} */
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 26px;
+    line-height: 120%;
+    font-weight: bold;
+  }
+
+  h2 {
+    font-size: 22px;
+    line-height: 120%;
+    font-weight: bold;
+  }
+
+  h3 {
+    font-size: 18px;
+    line-height: 120%;
+    font-weight: bold;
+  }
+
+  h4 {
+    font-size: 16px;
+    line-height: 120%;
+    font-weight: bold;
+  }
+
+  h5 {
+    font-size: 18px;
+    line-height: 120%;
+    font-weight: bold;
+  }
+
+  h6 {
+    font-size: 16px;
+    line-height: 120%;
+    font-weight: bold;
+  }
+
+  p {
+    font-size: 3.6rem;
+  }
+}
+
+/* Modal and Swiper */
+
+.popup-overlay {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.swiper-pagination-bullet {
+  border: 1px solid var(--primary600);
+}
+
+.swiper-pagination-bullet-active {
+  background-color: var(--primary600) !important;
+}

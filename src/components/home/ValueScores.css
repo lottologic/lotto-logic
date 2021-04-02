@@ -1,0 +1,92 @@
+.owl-carousel {
+    position: relative;
+}
+
+.owl-nav {
+    position: absolute;
+    top: 50%;
+    display: flex;
+    justify-content: space-between;
+    width: 110%;
+    left: -5%;
+}
+
+.value-scores .owl-item {
+    opacity: 0.5;
+    transition: all 0.5s ease;
+    transform: scale(0.5) !important;
+}
+
+.value-scores .owl-item.active.center {
+    transform: scale(1) !important;
+    opacity: 1;
+}
+
+.value-scores .owl-item.active.center+.owl-item.active {
+    transform: scale(0.7) !important;
+}
+
+.value-scores .oddChild {
+    transform: scale(0.7) !important;
+}
+
+.wave span {
+    display: inline-block;
+    animation: wave-text 1s ease-in-out infinite;
+    color: var(--primary600);
+}
+
+.wave span:nth-of-type(1) {
+    animation-delay: 0.0s;
+}
+
+.wave span:nth-of-type(2) {
+    animation-delay: 0.1s;
+}
+
+.wave span:nth-of-type(3) {
+    animation-delay: 0.2s;
+}
+
+.wave span:nth-of-type(4) {
+    animation-delay: 0.3s;
+}
+
+.wave span:nth-of-type(5) {
+    animation-delay: 0.4s;
+}
+
+.wave span:nth-of-type(6) {
+    animation-delay: 0.5s;
+}
+
+.wave span:nth-of-type(7) {
+    animation-delay: 0.6s;
+}
+
+.wave span:nth-of-type(8) {
+    animation-delay: 0.7s;
+}
+
+.wave span:nth-of-type(9) {
+    animation-delay: 0.8s;
+}
+
+@keyframes wave-text {
+    00% {
+        transform: translateY(0em);
+    }
+    60% {
+        transform: translateY(-0.6em);
+    }
+    100% {
+        transform: translateY(0em);
+    }
+}
+
+@media (max-width: 767px) {
+    .owl-nav {
+        width: 140%;
+        left: -20%;
+    }
+}

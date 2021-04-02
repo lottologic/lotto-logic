@@ -1,0 +1,135 @@
+.root {
+    width: 100%;
+    min-height: 200px;
+    display: flex;
+    padding-right: 20px;
+}
+
+.boxLeft {
+    width: 40%;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: 0.4fr 1fr;
+    height: 48px;
+}
+
+.headerRow {
+    display: grid;
+    grid-template-columns: 0.4fr 1fr;
+    height: 60px;
+}
+
+.headerCell {
+    background-color: var(--primary600);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.headerCell button {
+    color: var(--white);
+}
+
+.positionLabel {
+    border: 1px solid var(--ruby);
+    border-radius: 50% 0 0 50%;
+    border-right: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.firstRow {
+    background-color: rgba(var(--goldRGB),0.4);
+}
+
+.secondRow {
+    background-color: rgba(var(--orangeRGB), 0.4);
+}
+
+.thirdRow {
+    background-color: rgba(var(--fluroPinkRGB), 0.4);
+}
+
+.oddRow {
+    background-color: var(--primary100);
+}
+
+.positionLabel.oddRow {
+    background-color: transparent;
+}
+
+.evenRow {
+    background-color: var(--white);
+}
+
+.cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.boxLeft .cell {
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+.lotteryImage {
+    height: 20px;
+    max-width: 100%;
+}
+
+.boxRight {
+    width: 60%;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+.boxRight .row {
+    grid-template-columns: 1fr 1fr;
+}
+
+.boxRight .headerRow {
+    grid-template-columns: 1fr 1fr;
+}
+
+.lastSlideRow {
+    grid-template-columns: 1fr 0.4fr !important;
+    background-color: var(--white);
+}
+
+.infoBtn {
+    padding: 5px 10px;
+    border-radius: 50%;
+    background-color: var(--primary600);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal {
+    background-color: var(--white);
+    width: 80%;
+    margin: auto;
+    border-radius: 4px;
+    box-shadow: var(--boxShadow);
+}
+
+.modalHeader {
+    background-color: var(--primary600);
+    color: var(--white);
+    display: flex;
+}
+
+.modalImg {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modalBody {
+    padding: 20px;
+}

@@ -1,0 +1,25 @@
+.blog-details-enter {
+    opacity: 0.01;
+    /* transform: scale(1.1); */
+}
+
+.blog-details-enter-active {
+    opacity: 1;
+    /* transform: scale(1); */
+    transition: all 2000ms;
+}
+
+.blog-details-exit {
+    opacity: 1;
+    /* transform: scale(1); */
+}
+
+.blog-details-exit-active {
+    opacity: 0.01;
+    /* transform: scale(1.1); */
+    transition: all 2000ms;
+}
+
+.blog-details-tg > div {
+    transition: all 2000ms;
+}

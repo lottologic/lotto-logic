@@ -1,0 +1,76 @@
+.root {
+    padding: 20px 0 120px;
+}
+
+.sectionHeading {
+    margin-top: 56px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.sectionText {
+    width: 50%;
+    color: var(--grey4);
+    text-align: center;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 0;
+}
+
+.toggleBtn {
+    width: 120px;
+    
+    border: 1px solid var(--cream);
+    border-radius: 4px;
+}
+
+.toggleBtn.active {
+    background-color: var(--cream) !important;
+}
+
+.sectionFooter {
+    width: 100%;
+    padding-left: 36px;
+    padding-top: 40px;
+    padding-right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 95%;
+}
+
+.boldText {
+    font-weight: bold;
+    color: var(--grey9);
+}
+
+.footerText {
+    width: 33%;
+    color: var(--grey4);
+}
+
+.footerDropdowns {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+@media (max-width: 768px) {
+    .sectionText {
+        width: 70%;
+    }
+
+    .sectionFooter {
+        flex-direction: column;
+    }
+
+    .footerText {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px !important;
+    }
+}

@@ -1,0 +1,26 @@
+/* Modal and Swiper */
+
+.burger .burger-lines, .burger .burger-lines:after, .burger .burger-lines:before {
+    background-color: var(--cream);
+}
+
+.static h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.static p {
+    color: var(--grey4);
+    margin-bottom: 2rem;
+}
+
+.static ul {
+    padding-inline-start: 20px;
+}
+
+@media (max-width: 767px) {
+    .burger {
+        font-size: 9px;
+        padding: 0;
+    }
+}

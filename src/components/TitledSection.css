@@ -1,0 +1,38 @@
+.root {
+    background-color: var(--cream);
+    min-height: 450px;
+    padding: 75px 0;
+    position: relative;
+}
+
+.title {
+    width: 420px;
+    background-color: var(--white);
+    border: 1px solid var(--cream);
+    border-radius: 4px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: absolute;
+    top: -24px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    .title {
+        width: 175px;
+        height: 54px;
+        top: -27px;
+    }
+}
