@@ -19,11 +19,25 @@ const ScrollContainer = ({ children }) => {
         });
     
         // each time Locomotive Scroll updates, tell ScrollTrigger to update too (sync positioning)
-        // let prevScrollPosition = 0;
         locoScroll.on('scroll', (e) => {
-          //document.documentElement.setAttribute('data-direction', e.direction)
-          //const currentScrollPos = locoScroll.scroll.instance.scroll.y;
+          /* if (e.direction !== 'down') {
+            //console.log('show');
+            gsap.to($('#navbar'), {
+              y: 0,
+              duration: 0.5,
+            });
+          } else {
+            //console.log('hide')
+            gsap.to($('#navbar'), {
+              y: -100,
+              duration: 0.5,
+            });
+          } */
+          ScrollTrigger.update();
+        });
 
+        var isScrolling;
+        locoScroll.on('scroll', function (e) {
           if (e.direction !== 'down') {
             //console.log('show');
             gsap.to($('#navbar'), {
@@ -37,8 +51,19 @@ const ScrollContainer = ({ children }) => {
               duration: 0.5,
             });
           }
-          //prevScrollPosition = currentScrollPos;
-          ScrollTrigger.update();
+
+          window.clearTimeout( isScrolling );
+
+          isScrolling = setTimeout(function() {
+
+            // Run the callback
+            gsap.to($('#navbar'), {
+              y: 0,
+              duration: 0.5,
+            });
+            console.log( 'Scrolling has stopped.' );
+        
+          }, 66);
         });
     
         // tell ScrollTrigger to use these proxy methods for the "#scroll-container" element since Locomotive Scroll is hijacking things

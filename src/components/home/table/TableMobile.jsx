@@ -54,7 +54,7 @@ const TableMobile = ({ data, selectedButton }) => {
                     </div>
                 </div>
                 {data.map((d, index) => (
-                    <div className={styles.row}>
+                    <div className={styles.row} key={d.lottery}>
                         <div
                             key={d.lottery}
                             className={`${index >= 0 && index <= 2 ? styles.positionLabel : ''} ${getClassNameForPositionLabel(index)}`}

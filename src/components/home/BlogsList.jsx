@@ -100,7 +100,6 @@ const BlogsList = ({ blogs, setSelectedBlog }) => {
     }
 
     const slidesToShow = blogs.length > 1 && blogs.length <= 3 ? blogs.length - 1 : 3;
-    console.log(slidesToShow)
 
     const settings = {
         className: 'blogs-list',
