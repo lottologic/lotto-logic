@@ -38,32 +38,24 @@ const ScrollContainer = ({ children }) => {
 
         var isScrolling;
         locoScroll.on('scroll', function (e) {
-          if (e.direction !== 'down') {
-            //console.log('show');
-            gsap.to($('#navbar'), {
-              y: 0,
-              duration: 0.5,
-            });
-          } else {
-            //console.log('hide')
+          console.log(isScrolling)
+          if (isScrolling !== -1) {
             gsap.to($('#navbar'), {
               y: -100,
-              duration: 0.5,
+              //duration: 0.5,
             });
           }
 
-          window.clearTimeout( isScrolling );
+          window.clearTimeout( isScrolling );         
 
           isScrolling = setTimeout(function() {
-
-            // Run the callback
             gsap.to($('#navbar'), {
               y: 0,
-              duration: 0.5,
+              //duration: 0.5,
             });
             console.log( 'Scrolling has stopped.' );
         
-          }, 66);
+          }, 66);       
         });
     
         // tell ScrollTrigger to use these proxy methods for the "#scroll-container" element since Locomotive Scroll is hijacking things
