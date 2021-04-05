@@ -1,8 +1,8 @@
 /* Modal and Swiper */
 
-html[data-direction="down"] #navbar {
+/* html[data-direction="down"] #navbar {
     transform: translate3d(0,-100%,0);
-}
+} */
 
 #scroll-container {
     padding-top: 60px;

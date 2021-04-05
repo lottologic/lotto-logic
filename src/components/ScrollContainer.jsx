@@ -21,10 +21,10 @@ const ScrollContainer = ({ children }) => {
         // each time Locomotive Scroll updates, tell ScrollTrigger to update too (sync positioning)
         // let prevScrollPosition = 0;
         locoScroll.on('scroll', (e) => {
-          document.documentElement.setAttribute('data-direction', e.direction)
+          //document.documentElement.setAttribute('data-direction', e.direction)
           //const currentScrollPos = locoScroll.scroll.instance.scroll.y;
 
-          /* if (e.direction !== 'down') {
+          if (e.direction !== 'down') {
             //console.log('show');
             gsap.to($('#navbar'), {
               y: 0,
@@ -36,7 +36,7 @@ const ScrollContainer = ({ children }) => {
               y: -100,
               duration: 0.5,
             });
-          } */
+          }
           //prevScrollPosition = currentScrollPos;
           ScrollTrigger.update();
         });
