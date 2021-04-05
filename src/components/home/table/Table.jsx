@@ -82,7 +82,7 @@ const Table = ({ data, sortBy }) => {
 
     if (window.innerWidth <= 786) {
         return (
-            <TableMobile data={data} />
+            <TableMobile data={data} selectedButton={sortBy} />
         )
     }
 

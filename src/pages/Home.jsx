@@ -21,8 +21,9 @@ const Home = ({ scrollToId }) => {
     }, [scrollToId]);
 
     return (
-        <ScrollContainer>
+        <>
             <Navbar showButtons />
+            <ScrollContainer>           
             <main>
                 <HomeHero />
                 <LottoData />
@@ -33,6 +34,7 @@ const Home = ({ scrollToId }) => {
             </main>
             <Footer showRegisterInput />
         </ScrollContainer>
+        </>
     );
 };
 

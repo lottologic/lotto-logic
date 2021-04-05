@@ -52,8 +52,8 @@ const Footer = ({ showRegisterInput }) => {
                             </a>
                         </div>
                         <div className="col-md-4 d-flex flex-column">
-                            <a>
-                                <button textsize="small" className={styles.footerLink}>Support</button>
+                            <a href="/disclaimer">
+                                <button textsize="small" className={styles.footerLink}>Disclaimer</button>
                             </a>
                             <a href="/privacy-policy">
                                 <button textsize="small" className={styles.footerLink}>Privacy Policy</button>

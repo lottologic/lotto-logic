@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import LocomotiveScroll from 'locomotive-scroll';
 
+const $ = window.$;
 const gsap = window.gsap;
 const ScrollTrigger = window.ScrollTrigger;
 gsap.registerPlugin(ScrollTrigger);
@@ -14,10 +15,31 @@ const ScrollContainer = ({ children }) => {
         const locoScroll = new LocomotiveScroll({
           el: document.getElementById('scroll-container'),
           smooth: true,
+          getDirection: true,
         });
     
         // each time Locomotive Scroll updates, tell ScrollTrigger to update too (sync positioning)
-        locoScroll.on('scroll', ScrollTrigger.update);
+        // let prevScrollPosition = 0;
+        locoScroll.on('scroll', (e) => {
+          document.documentElement.setAttribute('data-direction', e.direction)
+          //const currentScrollPos = locoScroll.scroll.instance.scroll.y;
+
+          /* if (e.direction !== 'down') {
+            //console.log('show');
+            gsap.to($('#navbar'), {
+              y: 0,
+              duration: 0.5,
+            });
+          } else {
+            //console.log('hide')
+            gsap.to($('#navbar'), {
+              y: -100,
+              duration: 0.5,
+            });
+          } */
+          //prevScrollPosition = currentScrollPos;
+          ScrollTrigger.update();
+        });
     
         // tell ScrollTrigger to use these proxy methods for the "#scroll-container" element since Locomotive Scroll is hijacking things
         ScrollTrigger.scrollerProxy('#scroll-container', {

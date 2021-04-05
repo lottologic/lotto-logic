@@ -12,7 +12,7 @@ import styles from './tableMobile.module.css';
 
 SwiperCore.use([Navigation, Pagination]);
 
-const TableMobile = ({ data }) => {
+const TableMobile = ({ data, selectedButton }) => {
     const getClassNameForPositionLabel = (index) => {
         if (index === 0) {
             return styles.firstRow;
@@ -97,7 +97,7 @@ const TableMobile = ({ data }) => {
                         {data.map((d, index) => (
                             <div className={styles.row}>
                                 <div className={`${styles.cell} ${getClassNameForRow(index)}`} style={{ color: 'var(--ruby)' }}>
-                                    {d.totalValueScore}
+                                    {selectedButton === 'jackpot' ? d.jackpotScoreValue : d.totalValueScore}
                                 </div>
                                 <div className={`${styles.cell} ${getClassNameForRow(index)}`}>
                                     {d.drawNumber}
@@ -119,7 +119,7 @@ const TableMobile = ({ data }) => {
                         {data.map((d, index) => (
                             <div className={styles.row}>
                                 <div className={`${styles.cell} ${getClassNameForRow(index)}`}>
-                                    {d.jackpot}
+                                    ${d.jackpot.toFixed(1)}m
                                 </div>
                                 <div className={`${styles.cell} ${getClassNameForRow(index)}`}>
                                     {d.expSharesinJackpot}

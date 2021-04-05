@@ -11,7 +11,7 @@ const $ = window.$;
 
 const LottoData = () => {
 
-    const [selectedButton, setSelectedButton] = useState('jackpot');
+    const [selectedButton, setSelectedButton] = useState('');
     const [data, setData] = useState([]);
     const [selectedLottery, setSelectedLottery] = useState('OZ lotto');
     const [selectedShares, setSelectedShares] = useState(1);
@@ -42,37 +42,66 @@ const LottoData = () => {
         }
     };
 
+    
+
     useEffect(() => {
-        const fetchData = async () => {
-            const response = await axios.get('https://api.lottologic.org/user/fetch');
-            let dataTemp = response.data;
-
-            let dataTempArray = Object.values(dataTemp);
-            if (dataTempArray && dataTempArray.length > 0) {
-                const ddValueData = dataTempArray.find(d => d.dropdown);
-                sortByJackpotValue(dataTempArray);
-                setSelectedLottery(ddValueData.lottery);
-                setSelectedShares(dataTempArray[0].expSharesinJackpot);
-            }
-        }
-        fetchData();
-
+        let selectedButtonFetch = 'jackpot';
         const fetchSelectedButton = async () => {
             const response = await axios.get('https://api.lottologic.org/user/defaultVal');
             let dataTemp = response.data;
-            //console.log(dataTemp.column_name);
-
+            
             if (dataTemp.column_name === 'jackpot_value_score') {
+                selectedButtonFetch = 'jackpot';
                 setSelectedButton('jackpot');
-
             } else {
+                selectedButtonFetch = 'total';
                 setSelectedButton('total');
-
             }
         }
 
-        fetchSelectedButton();
+        const fetchData = async () => {
+            const response = await axios.get('https://api.lottologic.org/user/fetch');
+            let dataTemp = response.data;
+    
+            let dataTempArray = Object.values(dataTemp);
+            if (dataTempArray && dataTempArray.length > 0) {
+                const ddValueData = dataTempArray.find(d => d.dropdown);
+                if (selectedButtonFetch === 'jackpot') {
+                    sortByJackpotValue(dataTempArray);
+                } else {
+                    sortByTotalValue(dataTempArray);
+                }
+                setSelectedLottery(ddValueData.lottery);
+                setSelectedShares(ddValueData.expSharesinJackpot);
+            }
+        }
+
+        fetchSelectedButton();      
+        fetchData();       
     }, []);
+
+    useEffect(() => {
+        const dataTemp = data.find(d => d.lottery === selectedLottery);
+        if (dataTemp) {
+            setSelectedShares(dataTemp.expSharesinJackpot);
+        }
+
+        const fetchData = async () => {
+            const response = await axios.get('https://api.lottologic.org/user/fetch');
+            let dataTemp = response.data;
+    
+            let dataTempArray = Object.values(dataTemp);
+            if (dataTempArray && dataTempArray.length > 0) {
+                if (selectedButton === 'jackpot') {
+                    sortByJackpotValue(dataTempArray);
+                } else {
+                    sortByTotalValue(dataTempArray);
+                }
+            }
+        }
+        
+        fetchData();
+    }, [selectedLottery])
 
     useEffect(() => {
 
@@ -103,7 +132,7 @@ const LottoData = () => {
             fetchData();
         }
 
-    }, [selectedShares, selectedLottery]);
+    }, [selectedShares]);
 
     useEffect(() => {
         if (selectedButton === 'jackpot') {

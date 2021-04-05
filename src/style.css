@@ -1,5 +1,13 @@
 /* Modal and Swiper */
 
+html[data-direction="down"] #navbar {
+    transform: translate3d(0,-100%,0);
+}
+
+#scroll-container {
+    padding-top: 60px;
+}
+
 .burger .burger-lines, .burger .burger-lines:after, .burger .burger-lines:before {
     background-color: var(--cream);
 }

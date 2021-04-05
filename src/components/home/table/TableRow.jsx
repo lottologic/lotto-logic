@@ -127,7 +127,7 @@ const TableRow = ({
                     <p textsize="small">{drawNo}</p>
                 </Cell>
                 <Cell>
-                    <p textsize="small">{jackpot.toFixed(1)}m</p>
+                    <p textsize="small">${jackpot.toFixed(1)}m</p>
                 </Cell>
                 <Cell>
                     <p textsize="small">{jackpotShares}</p>

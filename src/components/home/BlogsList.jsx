@@ -99,7 +99,8 @@ const BlogsList = ({ blogs, setSelectedBlog }) => {
         $('.slick-prev').click();
     }
 
-    const slidesToShow = blogs.length > 1 && blogs.length < 3 ? blogs.length - 1 : 3;
+    const slidesToShow = blogs.length > 1 && blogs.length <= 3 ? blogs.length - 1 : 3;
+    console.log(slidesToShow)
 
     const settings = {
         className: 'blogs-list',
@@ -128,7 +129,7 @@ const BlogsList = ({ blogs, setSelectedBlog }) => {
             <div className="row d-flex align-iems-center justify-content-center pt-4 blogsList">
                 <div className="col-md-7">
                     <p textsize="large" className="text-center blogs-subheading">
-                        We’re pretty unique in what we do so we share our perspectives and learnings through our blog bellow.
+                        We’re pretty unique in what we do so we share our perspectives and learnings through our blog below.
                     </p>
                 </div>
             </div>

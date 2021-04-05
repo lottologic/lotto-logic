@@ -7,7 +7,7 @@ const Modal = ({setActive, children}) => {
     
   useEffect(() => {
       // Acceses the locomotive instance to set the height of the success window
-      // document.querySelector("#popupContainer").style.top = `${Math.round(window.locoScroll.scroll.instance.delta.y)}px`;
+      //document.querySelector("#popupContainer").style.top = `${Math.round(window.locoScroll.scroll.instance.delta.y)}px`;
   },[]);
 
   const closeModal = () => {

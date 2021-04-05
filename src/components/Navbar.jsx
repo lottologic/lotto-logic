@@ -55,7 +55,7 @@ const Navbar = ({ showButtons }) => {
     }
 
     return (
-        <div className={styles.root}>
+        <div className={styles.root} id="navbar">
             <div className={styles.hamburgerMenuCont}>
                 <Burger
                     isOpen={isOpen}
@@ -118,8 +118,8 @@ const Navbar = ({ showButtons }) => {
                 </div>
 
                 <div className={styles.listGroup}>
-                    <button>
-                        <h4 className={styles.menuItem}>SUPPORT</h4>
+                    <button onClick={() => setIsOpen(false)}>
+                        <a href="https://improov.io/feedback?ID=HLTUOX2" target="_blank" rel="noreferrer" ><h4 className={styles.menuItem}>SUPPORT</h4></a>
                     </button>
                     <button onClick={() => setIsOpen(false)}>
                         <a href="/privacy-policy"><h4 className={styles.menuItem}>PRIVACY POLICY</h4></a>
