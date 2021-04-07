@@ -38,24 +38,23 @@ const ScrollContainer = ({ children }) => {
 
         var isScrolling;
         locoScroll.on('scroll', function (e) {
-          console.log(isScrolling)
-          if (isScrolling !== -1) {
+          if (e.scroll.y > 80) {
             gsap.to($('#navbar'), {
               y: -100,
-              //duration: 0.5,
             });
-          }
-
-          window.clearTimeout( isScrolling );         
-
-          isScrolling = setTimeout(function() {
+  
+            window.clearTimeout( isScrolling );         
+  
+            isScrolling = setTimeout(function() {
+              gsap.to($('#navbar'), {
+                y: 0,
+              });
+            }, 1000); 
+          } else {
             gsap.to($('#navbar'), {
               y: 0,
-              //duration: 0.5,
             });
-            console.log( 'Scrolling has stopped.' );
-        
-          }, 66);       
+          }     
         });
     
         // tell ScrollTrigger to use these proxy methods for the "#scroll-container" element since Locomotive Scroll is hijacking things
@@ -79,9 +78,9 @@ const ScrollContainer = ({ children }) => {
         // after everything is set up, refresh() ScrollTrigger and update LocomotiveScroll because padding may have been added for pinning, etc.
         ScrollTrigger.refresh();
 
-        setInterval(() => {
+        /* setInterval(() => {
           locoScroll.update();
-        }, 2000);
+        }, 2000); */
 
         window.locoScroll = locoScroll;
     }, []);

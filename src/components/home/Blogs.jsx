@@ -88,10 +88,9 @@ const Blogs = () => {
 
     useEffect(() => {
         const fetchBlogs = async () => {
-            //setBlogs(blogsData);
-            //setSelectedBlog(blogsData[0])
             const response = await axios.get('https://api.lottologic.org/user/viewblog');
             const blogsTemp = response.data;
+
             if (blogsTemp) {
                 setBlogs(blogsTemp);
                 setSelectedBlog(blogsTemp[0]);
