@@ -99,11 +99,11 @@ const BlogsList = ({ blogs, setSelectedBlog }) => {
         $('.slick-prev').click();
     }
 
-    const slidesToShow = blogs.length > 1 && blogs.length <= 3 ? blogs.length - 1 : blogs.length === 1 ? 1 : 3;
+    const slidesToShow = blogs.length <= 3 ? 1 : 3; 
 
     const settings = {
         className: 'blogs-list',
-        centerMode: blogs.length < 3 ? false : true,
+        centerMode: true,
         dots: false,
         infinite: true,
         speed: 500,
