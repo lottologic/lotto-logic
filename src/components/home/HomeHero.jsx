@@ -10,7 +10,7 @@ const HomeHero = () => {
                     <img src={HomeHeroImage} alt="" className={styles.heroImage} />
                 </div>
                 <div className="col-md-7 d-flex flex-column justify-content-center">
-                    <h1>We rank the best value-for-money lotteries daily. For you.</h1>
+                    <h1>We rank lotteries by value-for-money, daily.</h1>
                     <hr className={styles.line} />
                     <div className="d-flex align-items-center">
                         <h5 className={styles.todaysPickHeading}>

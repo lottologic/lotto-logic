@@ -164,7 +164,7 @@ const LottoData = () => {
                     Forget guessing which lottery is best to buy.
                 </h2>
                 <p textsize="large" className={styles.sectionText}>
-                    We analyse lotteries and rank them daily, so you know which lottery is the best value-for-money, always.
+                    Replace with "Check Lotto Logic before you buy a ticket, so you know which lottery is the best bang for your buck."
                 </p>
                 <div className={styles.buttons}>
                     <button
