@@ -78,3 +78,11 @@
 .rangeInput {
   -moz-appearance: textfield;
 }
+
+@media (max-width: 767px) {
+    
+
+    .rangeInput {
+        width: 40px;
+    }
+}
