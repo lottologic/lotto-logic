@@ -49,7 +49,7 @@ function App() {
           <Route path="/how-we-do-it">
             <Home scrollToId="tableSectionHeading" />
           </Route>
-          <Route path="/success">
+          <Route path="/submit">
             <Success />
           </Route>
           <Route path="/">

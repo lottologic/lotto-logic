@@ -15,7 +15,7 @@ const SignupModal = ({ active, setActive }) => {
                     method="post"
                     name="signup"
                     data-netlify="true"
-                    action="/success"
+                    action="/submit"
                 >
                     <input type="hidden" name="form-name" value="signup" />
                     <div className={styles.modalFormRow}>

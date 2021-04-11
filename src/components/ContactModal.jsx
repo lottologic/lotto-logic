@@ -59,7 +59,7 @@ const ContactModal = ({ active, setActive }) => {
                     method="post"
                     name="contact"
                     data-netlify="true"
-                    action="/success"
+                    action="/submit"
                 >
                     <input type="hidden" name="form-name" value="contact" />
                     <div className={styles.modalFormRow}>
