@@ -28,7 +28,7 @@ const Footer = ({ showRegisterInput }) => {
                     method="post"
                     name="signup"
                     data-netlify="true"
-                    action="/submit"
+                    action="/success"
                 >
                     <input type="hidden" name="form-name" value="signup" />
                     <button className={styles.loopBtn}>

@@ -59,10 +59,7 @@ const ContactModal = ({ active, setActive }) => {
                     method="post"
                     name="contact"
                     data-netlify="true"
-                    onSubmit={(e) => {
-                        e.preventDefault();
-                        setShowSuccess(true);
-                    }}
+                    action="/submit"
                 >
                     <input type="hidden" name="form-name" value="contact" />
                     <div className={styles.modalFormRow}>
