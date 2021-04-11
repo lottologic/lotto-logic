@@ -23,16 +23,23 @@ const Footer = ({ showRegisterInput }) => {
     return (
         <div className={styles.root}>
             {showRegisterInput && (
-                <div className={styles.footerTitle}>
+                <form
+                    className={styles.footerTitle}
+                    method="post"
+                    name="signup"
+                    data-netlify="true"
+                    action="/success"
+                >
+                    <input type="hidden" name="form-name" value="signup" />
                     <button className={styles.loopBtn}>
                         STAY IN THE LOOP
                     </button>
                     <input type="email" name="email" placeholder="Enter email here" className={styles.emailInput} />
-                    <button className={styles.submitBtn} textsize="small">
+                    <button className={styles.submitBtn} textsize="small" type="submit">
                         <span className="mr-2">Sign Up here</span>
                         <i className={`fa fa-angle-right ${styles.iconRight}`} aria-hidden="true"></i>
                     </button>
-                </div>
+                </form>
             )}
             <div className="container h-100">
                 <div className={`row d-flex ${styles.footerRow}`}>

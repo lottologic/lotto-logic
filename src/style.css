@@ -26,6 +26,11 @@
     padding-inline-start: 20px;
 }
 
+.back-button {
+    background-color: var(--primary600);
+    color: var(--white);
+}
+
 @media (max-width: 767px) {
     .burger {
         font-size: 9px;

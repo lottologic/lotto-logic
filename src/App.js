@@ -9,6 +9,7 @@ import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsOfUse from './pages/TermsOfUse';
 import Disclaimer from './pages/Disclaimer';
 import PressPackage from './pages/PressPackage';
+import Success from './pages/Success';
 
 const gsap = window.gsap;
 const ScrollTrigger = window.ScrollTrigger;
@@ -47,6 +48,9 @@ function App() {
           </Route>
           <Route path="/how-we-do-it">
             <Home scrollToId="tableSectionHeading" />
+          </Route>
+          <Route path="/success">
+            <Success />
           </Route>
           <Route path="/">
             <Home />

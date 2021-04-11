@@ -10,11 +10,18 @@ const SignupModal = ({ active, setActive }) => {
                     <span style={{ color: 'var(--primary600)' }}>Stay in the loop.</span>
                     &nbsp;Put in your email and we will keep you updated.
                 </p>
-                <form className={styles.modalForm}>
+                <form
+                    className={styles.modalForm}
+                    method="post"
+                    name="signup"
+                    data-netlify="true"
+                    action="/success"
+                >
+                    <input type="hidden" name="form-name" value="signup" />
                     <div className={styles.modalFormRow}>
                         <input className={styles.modalInput} name="email" placeholder="Email Address" />
                     </div>
-                    <button className={styles.modalSubmitBtn}>
+                    <button type="submit" className={styles.modalSubmitBtn}>
                         Submit
                     </button>
                 </form>

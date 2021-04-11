@@ -59,6 +59,7 @@ const ContactModal = ({ active, setActive }) => {
                     method="post"
                     name="contact"
                     data-netlify="true"
+                    action="/success"
                 >
                     <input type="hidden" name="form-name" value="contact" />
                     <div className={styles.modalFormRow}>
@@ -68,7 +69,7 @@ const ContactModal = ({ active, setActive }) => {
                     <div className={styles.modalFormRow}>
                         <input className={styles.modalInput} name="email" placeholder="Email Address" id="email" />
                     </div>
-                    <input className={styles.modalSubmitBtn} type="submit" value="SUBMIT" />
+                    <button className={styles.modalSubmitBtn} type="submit">Submit</button>
                     {showSuccess && (
                         <p textsize="large" className="alert alert-success mt-3" role="alert">
                             Thank you for your submission. We will get back to you shortly.
