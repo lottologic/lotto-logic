@@ -48,7 +48,7 @@ const ContactModal = ({ active, setActive }) => {
                     <div className={styles.modalFormRow}>
                         <input className={styles.modalInput} name="email" placeholder="Email Address" id="email" />
                     </div>
-                    <button className={styles.modalSubmitBtn} onClick={() => formRef.current.submit()}>
+                    <button className={styles.modalSubmitBtn} type="submit">
                         Submit
                     </button>
                     {showSuccess && (
