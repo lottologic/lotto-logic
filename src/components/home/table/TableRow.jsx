@@ -106,7 +106,7 @@ const TableRow = ({
     const getSuperscript = () => {
         if (index === 0) {
             return 'st';
-        } else if (index === 2) {
+        } else if (index === 1) {
             return 'nd';
         }
         return 'rd';

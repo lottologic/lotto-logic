@@ -15,7 +15,7 @@ const ContactModal = ({ active, setActive }) => {
     const handleSubmit = async (e) => {
         e.preventDefault();        
         try {
-            await fetch("/", {
+            const res = await fetch("/", {
                 method: "POST",
                 headers: { "Content-Type": "application/x-www-form-urlencoded" },
                 body: encode({
@@ -25,9 +25,11 @@ const ContactModal = ({ active, setActive }) => {
                     email: document.getElementById('email').value,
                 })
             });
+            console.log(res)
             setShowSuccess(true);
-        } catch (e) {
-            alert(e);
+        } catch (err) {
+            console.log(err)
+            alert(err);
         }
     };
 
@@ -39,7 +41,7 @@ const ContactModal = ({ active, setActive }) => {
                     Fill in the form and our team will reach out. You could also  email us at&nbsp;
                     <span style={{ color: 'var(--primary600)' }}>lottologichello@gmail.com</span>
                 </p>
-                <form className={styles.modalForm} onSubmit={handleSubmit} ref={formRef} method="post" name="contact" data-netlify="true">
+                <form className={styles.modalForm} onSubmit={handleSubmit} method="post" name="contact" data-netlify="true">
                     <input type="hidden" name="form-name" value="contact" />
                     <div className={styles.modalFormRow}>
                         <input className={`${styles.modalInput} ${styles.halfInput}`} name="firstName" placeholder="First Name" id="firstName" />
