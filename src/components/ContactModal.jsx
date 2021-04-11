@@ -1,6 +1,7 @@
 import styles from './navbar.module.css';
 import LocomotiveModal from './Modal';
 import { useRef, useState } from 'react';
+import axios from 'axios';
 
 const ContactModal = ({ active, setActive }) => {
     const formRef = useRef(null);
@@ -15,7 +16,18 @@ const ContactModal = ({ active, setActive }) => {
     const handleSubmit = async (e) => {
         e.preventDefault();        
         try {
-            const res = await fetch("/", {
+            console.log('requesting');
+            const res = await axios.post('/', encode({
+                "form-name": "contact",
+                firstName: document.getElementById('firstName').value,
+                lastName: document.getElementById('lastName').value,
+                email: document.getElementById('email').value,
+            }), {
+                headers: {
+                    "Content-Type": "application/x-www-form-urlencoded",
+                },
+            })
+            /* const res = await fetch("/", {
                 method: "POST",
                 headers: { "Content-Type": "application/x-www-form-urlencoded" },
                 body: encode({
@@ -24,7 +36,8 @@ const ContactModal = ({ active, setActive }) => {
                     lastName: document.getElementById('lastName').value,
                     email: document.getElementById('email').value,
                 })
-            });
+            }); */
+            console.log('after post');
             console.log(res)
             setShowSuccess(true);
         } catch (err) {
