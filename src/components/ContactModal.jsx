@@ -13,19 +13,19 @@ const ContactModal = ({ active, setActive }) => {
     }
 
     const handleSubmit = async (e) => {
-        e.preventDefault();
-        setShowSuccess(true);
+        e.preventDefault();        
         try {
-            const formData = {};
-            formData.firstName = document.getElementById('firstName').value;
-            formData.lastName = document.getElementById('lastName').value;
-            formData.email = document.getElementById('email').value;
-
             await fetch("/", {
                 method: "POST",
                 headers: { "Content-Type": "application/x-www-form-urlencoded" },
-                body: encode({ "form-name": "contact", ...formData })
+                body: encode({
+                    "form-name": "contact",
+                    firstName: document.getElementById('firstName').value,
+                    lastName: document.getElementById('lastName').value,
+                    email: document.getElementById('email').value,
+                })
             });
+            setShowSuccess(true);
         } catch (e) {
             alert(e);
         }
@@ -48,9 +48,7 @@ const ContactModal = ({ active, setActive }) => {
                     <div className={styles.modalFormRow}>
                         <input className={styles.modalInput} name="email" placeholder="Email Address" id="email" />
                     </div>
-                    <button className={styles.modalSubmitBtn} type="submit">
-                        Submit
-                    </button>
+                    <input className={styles.modalSubmitBtn} type="submit" value="SUBMIT" />
                     {showSuccess && (
                         <p textsize="large" className="alert alert-success mt-3" role="alert">
                             Thank you for your submission. We will get back to you shortly.
