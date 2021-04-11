@@ -54,7 +54,13 @@ const ContactModal = ({ active, setActive }) => {
                     Fill in the form and our team will reach out. You could also  email us at&nbsp;
                     <span style={{ color: 'var(--primary600)' }}>lottologichello@gmail.com</span>
                 </p>
-                <form className={styles.modalForm} onSubmit={handleSubmit} method="post" name="contact" data-netlify="true">
+                <form
+                    className={styles.modalForm}
+                    onSubmit={() => handleSubmit()}
+                    method="post"
+                    name="contact"
+                    data-netlify="true"
+                >
                     <input type="hidden" name="form-name" value="contact" />
                     <div className={styles.modalFormRow}>
                         <input className={`${styles.modalInput} ${styles.halfInput}`} name="firstName" placeholder="First Name" id="firstName" />
