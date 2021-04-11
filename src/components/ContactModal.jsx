@@ -12,22 +12,25 @@ const ContactModal = ({ active, setActive }) => {
             .join("&");
     }
 
-    const handleSubmit = e => {
-        const formData = {};
-        formData.firstName = document.getElementById('firstName').value;
-        formData.lastName = document.getElementById('lastName').value;
-        formData.email = document.getElementById('email').value;
-
-        fetch("/", {
-            method: "POST",
-            headers: { "Content-Type": "application/x-www-form-urlencoded" },
-            body: encode({ "form-name": "contact", ...formData })
-        })
-            .then(() => setShowSuccess(true))
-            .catch(error => alert(error));
-
+    const handleSubmit = async (e) => {
         e.preventDefault();
+        setShowSuccess(true);
+        try {
+            const formData = {};
+            formData.firstName = document.getElementById('firstName').value;
+            formData.lastName = document.getElementById('lastName').value;
+            formData.email = document.getElementById('email').value;
+
+            await fetch("/", {
+                method: "POST",
+                headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                body: encode({ "form-name": "contact", ...formData })
+            });
+        } catch (e) {
+            alert(e);
+        }
     };
+
     return (
         <LocomotiveModal active={active} setActive={setActive}>
             <div className={styles.modalRoot}>
@@ -36,7 +39,7 @@ const ContactModal = ({ active, setActive }) => {
                     Fill in the form and our team will reach out. You could also  email us at&nbsp;
                     <span style={{ color: 'var(--primary600)' }}>lottologichello@gmail.com</span>
                 </p>
-                <form className={styles.modalForm} onSubmit={handleSubmit} ref={formRef} method="post" name="contact">
+                <form className={styles.modalForm} onSubmit={handleSubmit} ref={formRef} method="post" name="contact" data-netlify="true">
                     <input type="hidden" name="form-name" value="contact" />
                     <div className={styles.modalFormRow}>
                         <input className={`${styles.modalInput} ${styles.halfInput}`} name="firstName" placeholder="First Name" id="firstName" />
