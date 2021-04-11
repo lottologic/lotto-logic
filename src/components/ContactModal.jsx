@@ -56,7 +56,6 @@ const ContactModal = ({ active, setActive }) => {
                 </p>
                 <form
                     className={styles.modalForm}
-                    onSubmit={() => handleSubmit()}
                     method="post"
                     name="contact"
                     data-netlify="true"
