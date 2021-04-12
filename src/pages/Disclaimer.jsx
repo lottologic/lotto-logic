@@ -13,7 +13,7 @@ const Disclaimer = () => {
                         <h1>Disclaimer</h1>
                         <p textsize="large">
                             <b>Note:</b><br />
-                        This website (lottologic.org) is owned and operated by Kapsoora Pty Ltd ACN: 648 875 263 trading as Lotto Logic (“Lotto Logic, “Our”, “We”, “Us”, “Company”, “Site” or “Website”).
+                        This website (lottologic.org) is owned and operated by Kapsoora Pty Ltd ACN: 648 875 263 trading as Lotto Logic (“Lotto Logic", “Our”, “We”, “Us”, “Company”, “Site” or “Website”).
                     </p>
                         <p textsize="large">
                             <b>About the site:</b>

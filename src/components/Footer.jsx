@@ -94,7 +94,7 @@ const Footer = ({ showRegisterInput }) => {
                             </a>
                         </div>
                         <p textsize="small" className={styles.footerText}>
-                            2021 lottologic pvt. ltd.
+                            © 2021 Kapsoora Pty Ltd trading as Lotto Logic.
                         </p>
                     </div>
                 </div>
