@@ -20,8 +20,12 @@ const Home = ({ scrollToId }) => {
 
             //when info icon in table is clicked, redirect to faq section
             $('.infoIcon').on('click', function () {
-                window.locoScroll.scrollTo($('#faq-1').offset().top,0,0);
-            })
+                if (window.innerWidth > 768) {
+                    window.locoScroll.scrollTo($('#faq-1').offset().top+200,0,0);
+                } else {
+                    window.locoScroll.scrollTo($('#faq-1').offset().top - 100,0,0);
+                }
+            });
         })
     }, [scrollToId]);
 
