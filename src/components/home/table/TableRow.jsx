@@ -37,7 +37,7 @@ const TableHeader = ({ setIsOddsOpen }) => {
             <HeaderCell>Lottery</HeaderCell>
             <HeaderCell>
                 Value Score
-                <img src={InfoIcon} alt="i" className={styles.infoIcon} id="infoIcon" />
+                <img src={InfoIcon} alt="i" className={`${styles.infoIcon} infoIcon`} />
             </HeaderCell>
             <HeaderCell>Draw No.</HeaderCell>
             <HeaderCell>Jackpot</HeaderCell>

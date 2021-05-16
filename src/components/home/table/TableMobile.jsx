@@ -1,6 +1,7 @@
 import Popup from 'reactjs-popup';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Navigation, Pagination } from 'swiper';
+import InfoIcon from '../../../assets/images/info.svg';
 
 // Import Swiper styles
 import 'swiper/swiper-bundle.min.css';
@@ -88,7 +89,12 @@ const TableMobile = ({ data, selectedButton }) => {
                     <SwiperSlide>
                         <div className={styles.headerRow}>
                             <div className={styles.headerCell}>
-                                <button textsize="small">Value Score</button>
+                                <button textsize="small">
+                                    <div className="d-flex align-items-center">
+                                        Value Score
+                                        <img src={InfoIcon} alt="i" className={`${styles.infoIcon} infoIcon`} />
+                                    </div>
+                                </button>
                             </div>
                             <div className={styles.headerCell}>
                                 <button textsize="small">Draw No.</button>

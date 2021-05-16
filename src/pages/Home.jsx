@@ -19,8 +19,8 @@ const Home = ({ scrollToId }) => {
             }
 
             //when info icon in table is clicked, redirect to faq section
-            $('#infoIcon').on('click', function () {
-                window.locoScroll.scrollTo($('#faq-1').offset().top + 100,0,0);
+            $('.infoIcon').on('click', function () {
+                window.locoScroll.scrollTo($('#faq-1').offset().top,0,0);
             })
         })
     }, [scrollToId]);

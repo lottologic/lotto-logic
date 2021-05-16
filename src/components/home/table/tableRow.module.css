@@ -106,3 +106,10 @@
     height: 40px;
     max-width: 115px;
 }
+
+.infoIcon {
+    margin-left: 10px;
+    margin-bottom: 2.5px;
+    width: 13px;
+    height: 13px;
+}
