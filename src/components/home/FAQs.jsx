@@ -38,7 +38,7 @@ const faqData = [
     },
 ];
 
-const FAQ = ({ question, answer, index }) => {
+const FAQ = ({ question, answer, index, id }) => {
     const [isOpen, setIsOpen] = useState(false);
     const faqRef = useRef(null);
 
@@ -58,7 +58,7 @@ const FAQ = ({ question, answer, index }) => {
     }
 
     return (
-        <div className="row">
+        <div className="row" id={id}>
             <div className={`col-md-12 text-center ${styles.faqRoot} ${index === faqData.length - 1 ? 'mb-0' : ''}`}>
                 <h4 className="">{question}</h4>
                 <div className={styles.expand} ref={faqRef}>
@@ -73,15 +73,17 @@ const FAQ = ({ question, answer, index }) => {
 }
 
 const FAQs = () => {
+
     return (
         <TitledSection title="FAQ's">
-            <div className={styles.root}>
+            <div className={styles.root} id="faq-section">
                 {faqData.map((faq, index) => (
                     <FAQ
                         question={faq.question}
                         answer={faq.answer}
                         key={faq.id}
                         index={index}
+                        id={`faq-${faq.id}`}
                     />
                 ))}
             </div>

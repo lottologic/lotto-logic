@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import InfoIcon from '../../../assets/images/info.svg';
 import styles from './tableRow.module.css';
 
 const gsap = window.gsap;
@@ -34,7 +35,10 @@ const TableHeader = ({ setIsOddsOpen }) => {
     return (
         <div className={`${styles.row} ${styles.header}`}>
             <HeaderCell>Lottery</HeaderCell>
-            <HeaderCell>Value Score</HeaderCell>
+            <HeaderCell>
+                Value Score
+                <img src={InfoIcon} alt="i" className={styles.infoIcon} id="infoIcon" />
+            </HeaderCell>
             <HeaderCell>Draw No.</HeaderCell>
             <HeaderCell>Jackpot</HeaderCell>
             <HeaderCell>Jackpot Shares</HeaderCell>

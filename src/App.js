@@ -17,16 +17,8 @@ gsap.registerPlugin(ScrollTrigger);
 
 function App() {
 
-  /* const handleAddToHomescreenClick = () => {
-    alert(`
-      1. Open Share menu
-      2. Tap on "Add to Home Screen" button`
-    );
-  }; */
-
   return (
     <div>
-      {/* <AddToHomescreen onAddToHomescreenClick={handleAddToHomescreenClick} /> */}
       <Switch>
           <Route path="/privacy-policy">
             <PrivacyPolicy />
@@ -48,6 +40,9 @@ function App() {
           </Route>
           <Route path="/how-we-do-it">
             <Home scrollToId="tableSectionHeading" />
+          </Route>
+          <Route path="/faq">
+            <Home scrollToId="faq-section" />
           </Route>
           <Route path="/submit">
             <Success />
