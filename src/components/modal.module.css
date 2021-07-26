@@ -17,6 +17,7 @@
     border-radius: .6rem;
     width: 50%;
     position: relative;
+    box-shadow: 6px 6px 20px 0px #4242424d;
 }
 
 .exitBtn {
@@ -43,5 +44,6 @@
     .popupContent {
         width: 90%;
         padding: 30px;
+        padding-top: 70px;
     }
 }

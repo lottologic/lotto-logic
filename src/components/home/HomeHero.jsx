@@ -1,8 +1,12 @@
+import { useState } from 'react';
 import HomeHeroImage from '../../assets/images/home-hero.png';
+import ValueScoreModal from '../ValueScoreModal';
 
 import styles from './homeHero.module.css';
 
-const HomeHero = () => {
+const HomeHero = ({openModal}) => {
+    
+
     return (
         <div className={styles.root}>
             <div className="container h-100 d-flex flex-wrap align-items-center">
@@ -17,7 +21,13 @@ const HomeHero = () => {
                             Today’s Pick:
                         </h5>
                         <img src="" alt="" id="todaysPickImg" className={styles.todaysPickLogo} />
-                    </div>                   
+                    </div>
+                    <button
+                        className={styles.infoBtn}
+                        onClick={openModal}
+                    >
+                        What is a Value Score?
+                    </button>
                 </div>
             </div>
         </div>

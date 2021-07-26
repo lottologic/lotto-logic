@@ -20,7 +20,7 @@ const Modal = ({setActive, children}) => {
   };
 
   return (
-    <div ref={greyArea} className={styles.popupContainer} id="popupContainer" onClick={(e) => clickGrey(e)}>
+    <div ref={greyArea} className={styles.popupContainer} id="popupContainer" onClick={(e) => clickGrey(e)} onScroll={() => console.log('scroll')}>
       <div className={styles.popupContent}>
         <button onClick={closeModal} className={styles.exitBtn} >
             <i className="fa fa-times" aria-hidden="true"></i>

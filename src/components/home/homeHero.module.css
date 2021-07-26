@@ -20,6 +20,13 @@
     height: 45px;
 }
 
+.infoBtn {
+    background-color: var(--primary600);
+    color: var(--white);
+    width: fit-content;
+    margin-top: 2.5rem;
+}
+
 @media (max-width: 768px) {
     .root {
         padding: 55px 0;

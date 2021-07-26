@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import Footer from "../components/Footer";
 import AboutUs from "../components/home/AboutUs"
 import Blogs from "../components/home/Blogs";
@@ -8,10 +8,15 @@ import LottoData from "../components/home/LottoData";
 import ValueScores from "../components/home/ValueScores";
 import Navbar from "../components/Navbar";
 import ScrollContainer from "../components/ScrollContainer";
+import ValueScoreModal from "../components/ValueScoreModal";
 
 const $ = window.$;
 
 const Home = ({ scrollToId }) => {
+    const [isValueScoreModalOpen, setIsValueScoreModalOpen] = useState(false);
+
+    const openValueScoreModal = () => setIsValueScoreModalOpen(true);
+
     useEffect(() => {
         $(window).on('load', function () {
             if (scrollToId) {
@@ -32,9 +37,10 @@ const Home = ({ scrollToId }) => {
     return (
         <>
             <Navbar showButtons />
+            <ValueScoreModal active={isValueScoreModalOpen} setActive={setIsValueScoreModalOpen} />
             <ScrollContainer>           
             <main>
-                <HomeHero />
+                <HomeHero openModal={openValueScoreModal} />
                 <LottoData />
                 <ValueScores />
                 <AboutUs />
