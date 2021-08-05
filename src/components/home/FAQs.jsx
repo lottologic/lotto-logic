@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import TitledSection from "../TitledSection";
 
 import styles from './faqs.module.css';
@@ -38,8 +38,8 @@ const faqData = [
     },
 ];
 
-const FAQ = ({ question, answer, index, id }) => {
-    const [isOpen, setIsOpen] = useState(false);
+const FAQ = ({ question, answer, index, id, open }) => {
+    const [isOpen, setIsOpen] = useState(open);
     const faqRef = useRef(null);
 
     const toggleFAQ = () => {
@@ -56,6 +56,15 @@ const FAQ = ({ question, answer, index, id }) => {
         }
         setIsOpen(!isOpen);
     }
+
+    useEffect(() => {
+        if (isOpen) {
+            gsap.to(faqRef.current, {
+                height: 'auto',
+                duration: 0.5,
+            });
+        }
+    })
 
     return (
         <div className="row" id={id}>
@@ -84,6 +93,7 @@ const FAQs = () => {
                         key={faq.id}
                         index={index}
                         id={`faq-${faq.id}`}
+                        open={faq.id === 1}
                     />
                 ))}
             </div>

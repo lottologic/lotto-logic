@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import HomeHeroImage from '../../assets/images/home-hero.png';
+import HomeHeroImage from '../../assets/images/fat-piggy.svg';
 import ValueScoreModal from '../ValueScoreModal';
 
 import styles from './homeHero.module.css';
